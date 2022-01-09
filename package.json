@@ -1,11 +1,21 @@
 {
-  "name": "root",
+  "name": "toolkit",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.2",
-    "@changesets/cli": "^2.19.0"
+    "@changesets/cli": "^2.19.0",
+    "@nrwl/tao": "13.4.3",
+    "@nrwl/cli": "13.4.3",
+    "@nrwl/workspace": "13.4.3",
+    "@types/node": "14.14.33",
+    "typescript": "~4.4.3",
+    "prettier": "^2.3.1"
   }
 }
