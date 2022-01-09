@@ -1,0 +1,5 @@
+{
+  "changelog": "@changesets/changelog-github",
+  "access": "public",
+  "baseBranch": "main"
+}
