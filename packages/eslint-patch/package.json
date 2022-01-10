@@ -1,0 +1,14 @@
+{
+  "name": "@mels/eslint-patch",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/eslint-patch"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-patch",
+  "scripts": {},
+  "dependencies": {
+    "@rushstack/eslint-patch": "1.1.0"
+  }
+}
