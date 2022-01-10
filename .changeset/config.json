@@ -1,5 +1,8 @@
 {
-  "changelog": "@changesets/changelog-github",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "melanieseltzer/toolkit" }
+  ],
   "access": "public",
   "baseBranch": "main"
 }
