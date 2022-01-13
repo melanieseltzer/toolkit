@@ -1,0 +1,29 @@
+name: Release
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          # This makes action fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: yarn
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Set GITHUB_SHA_SHORT
+        run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
+
+      - name: Read GITHUB_SHA_SHORT
+        run: echo ${GITHUB_SHA_SHORT}
