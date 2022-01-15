@@ -1,0 +1,29 @@
+name: Pre-release
+
+on:
+  pull_request:
+
+jobs:
+  publish_prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: yarn
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish Pre-release
+        run: |
+          COMMIT_SHA=${{ github.event.pull_request.head.sha }}
+          COMMIT_SHA_SHORT=$(git rev-parse --short "$COMMIT_SHA")
+          yarn changeset version --snapshot prerelease-$COMMIT_SHA_SHORT  
+          yarn changeset publish --tag prerelease
