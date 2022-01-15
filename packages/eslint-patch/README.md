@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/melanieseltzer/toolkit/blob/eslint-patch/assets/toolkit.png?raw=true" alt="Toolkit" width="150">
+  <img src="https://raw.githubusercontent.com/melanieseltzer/toolkit/main/assets/toolkit.png" alt="Toolkit" width="150">
   <br>
   @mels/eslint-patch
   <br>
@@ -9,7 +9,7 @@
 <h4 align="center">Allow shared ESLint configs to bring along their own plugins.</h4>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@mels/eslint-patch"><img alt="npm (scoped)" src="https://img.shields.io/npm/v/mels/eslint-patch"></a>
+  <a href="https://www.npmjs.com/package/@mels/eslint-patch"><img alt="npm (scoped)" src="https://img.shields.io/npm/v/@mels/eslint-patch"></a>
   <a href="https://twitter.com/melanieseltzer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/melanieseltzer?style=social"></a>
 </p>
 
@@ -58,7 +58,7 @@ module.exports = {
 ## Credits
 
 - [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch)
-- Logo by <a href="https://www.flaticon.com/authors/creatype" title="Creatype">Creatype</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+- Toolkit logo by <a href="https://www.flaticon.com/authors/creatype" title="Creatype">Creatype</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 ## License
 
