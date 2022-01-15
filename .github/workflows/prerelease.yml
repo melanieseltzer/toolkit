@@ -27,3 +27,6 @@ jobs:
           COMMIT_SHA_SHORT=$(git rev-parse --short "$COMMIT_SHA")
           yarn changeset version --snapshot prerelease-$COMMIT_SHA_SHORT  
           yarn changeset publish --tag prerelease
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
