@@ -1,7 +1,9 @@
 {
   "name": "@mels/eslint-patch",
   "version": "1.0.0",
+  "description": "Allow shared ESLint configs to bring along their own plugins.",
   "main": "./index.js",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
