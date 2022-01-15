@@ -1,4 +1,4 @@
-name: Prerelease
+name: Pre-release
 on:
   pull_request:
 
@@ -20,8 +20,8 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Set GITHUB_SHA_SHORT
-        run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
-
-      - name: Read GITHUB_SHA_SHORT
-        run: echo ${GITHUB_SHA_SHORT}
+      - name: Publish Pre-release
+        run: |
+          GITHUB_SHA_SHORT=$(git rev-parse --short "$GITHUB_SHA")
+          yarn changeset version --snapshot prerelease-$GITHUB_SHA_SHORT
+          yarn changeset publish --tag prerelease
