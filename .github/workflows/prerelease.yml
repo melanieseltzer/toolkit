@@ -1,9 +1,10 @@
 name: Pre-release
+
 on:
   pull_request:
 
 jobs:
-  prerelease:
+  publish_prerelease:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +23,7 @@ jobs:
 
       - name: Publish Pre-release
         run: |
-          GITHUB_SHA_SHORT=$(git rev-parse --short "$GITHUB_SHA")
-          yarn changeset version --snapshot prerelease-$GITHUB_SHA_SHORT
+          COMMIT_SHA=${{ github.event.pull_request.head.sha }}
+          COMMIT_SHA_SHORT=$(git rev-parse --short "$COMMIT_SHA")
+          yarn changeset version --snapshot prerelease-$COMMIT_SHA_SHORT  
           yarn changeset publish --tag prerelease
