@@ -9,10 +9,7 @@
   "license": "MIT",
   "scripts": {
     "changeset": "changeset",
-    "version": "changeset version",
-    "version:snapshot": "changeset version --snapshot",
-    "publish:release": "changeset publish",
-    "publish:prerelease": "changeset publish --tag prerelease"
+    "release": "changeset publish"
   },
   "dependencies": {},
   "devDependencies": {
