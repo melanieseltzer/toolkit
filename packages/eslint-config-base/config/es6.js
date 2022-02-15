@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    es6: true
+    es6: true,
   },
 
   rules: {
@@ -13,8 +13,8 @@ module.exports = {
       {
         functions: false,
         classes: false,
-        variables: false
-      }
+        variables: false,
+      },
     ],
 
     // https://eslint.org/docs/rules/no-useless-constructor#disallow-unnecessary-constructor-no-useless-constructor
@@ -36,6 +36,6 @@ module.exports = {
     'prefer-rest-params': 'warn',
 
     // https://eslint.org/docs/rules/prefer-spread#suggest-using-spread-syntax-instead-of-apply-prefer-spread
-    'prefer-spread': 'warn'
-  }
+    'prefer-spread': 'warn',
+  },
 };
