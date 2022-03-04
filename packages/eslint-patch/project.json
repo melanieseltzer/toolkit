@@ -1,0 +1,5 @@
+{
+  "root": "packages/eslint-patch",
+  "sourceRoot": "packages/eslint-patch",
+  "projectType": "library"
+}
