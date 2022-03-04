@@ -15,11 +15,17 @@ module.exports = {
         args: 'none',
         ignoreRestSiblings: true,
         varsIgnorePattern: '^_',
-        argsIgnorePattern: '^_'
-      }
+        argsIgnorePattern: '^_',
+      },
     ],
 
     // https://eslint.org/docs/rules/no-restricted-globals#disallow-specific-global-variables-no-restricted-globals
-    'no-restricted-globals': ['error'].concat(restrictedGlobals)
-  }
+    'no-restricted-globals': [
+      'error',
+      ...['error', ...restrictedGlobals].map((global) => ({
+        name: global,
+        message: `Did you mean to declare a local variable '${global}'?`,
+      })),
+    ],
+  },
 };

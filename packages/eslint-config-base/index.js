@@ -1,9 +1,9 @@
 const rules = [
-  './config/best-practices',
-  './config/es6',
-  './config/imports',
-  './config/style',
-  './config/variables',
+  './rules/best-practices',
+  './rules/es6',
+  './rules/imports',
+  './rules/style',
+  './rules/variables',
 ].map(require.resolve);
 
 module.exports = {
