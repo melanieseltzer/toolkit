@@ -3,6 +3,9 @@ name: Pre-release
 on:
   pull_request:
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
   publish_prerelease:
     runs-on: ubuntu-latest
@@ -16,10 +19,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Create .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+
       - name: Install Dependencies
         run: yarn
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Pre-release
         run: |
@@ -29,4 +36,3 @@ jobs:
           yarn changeset publish --tag prerelease
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
