@@ -13,7 +13,9 @@
     "directory": "packages/eslint-patch"
   },
   "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-patch#readme",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
     "@rushstack/eslint-patch": "1.1.0"
   }

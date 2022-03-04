@@ -13,7 +13,9 @@
     "directory": "packages/eslint-config-base"
   },
   "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-base#readme",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint ."
+  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-import": "2.25.4"
