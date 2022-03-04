@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "eslint-config-base": "packages/eslint-config-base",
     "eslint-patch": "packages/eslint-patch"
   }
 }
