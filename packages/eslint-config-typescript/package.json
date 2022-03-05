@@ -1,7 +1,6 @@
 {
   "name": "@mels/eslint-config-typescript",
   "version": "0.0.0",
-  "private": "true",
   "description": "Shareable TypeScript ESLint config.",
   "main": "./index.js",
   "license": "MIT",
