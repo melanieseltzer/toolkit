@@ -1,8 +1,8 @@
 {
-  "name": "typescript-project",
+  "name": "mixed-js-typescript-project",
   "private": true,
   "version": "1.0.0",
-  "description": "Example TypeScript project.",
+  "description": "Example mixed JavaScript/TypeScript project.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ."
