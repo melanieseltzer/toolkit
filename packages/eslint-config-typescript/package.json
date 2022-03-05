@@ -1,0 +1,29 @@
+{
+  "name": "@mels/eslint-config-typescript",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "Shareable TypeScript ESLint config.",
+  "main": "./index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/eslint-config-typescript"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-typescript#readme",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint-import-resolver-typescript": "^2.5.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0 || ^7.32.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}

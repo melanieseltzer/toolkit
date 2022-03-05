@@ -1,0 +1,5 @@
+{
+  "root": "packages/eslint-config-typescript",
+  "sourceRoot": "packages/eslint-config-typescript",
+  "projectType": "library"
+}
