@@ -5,7 +5,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       plugins: ['@typescript-eslint'],
-      parser: ['@typescript-eslint/parser'],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
         project: 'tsconfig.json',
         createDefaultProgram: true,
@@ -52,7 +52,14 @@ module.exports = {
             tsx: 'never',
           },
         ],
+
         camelcase: 'off',
+        'no-unused-expressions': 'off',
+        'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
+        'no-useless-constructor': 'off',
+
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/naming-convention': [
           'warn',
           {
@@ -71,7 +78,6 @@ module.exports = {
           },
         ],
         '@typescript-eslint/no-unnecessary-condition': 'warn',
-        'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': [
           'warn',
           {
@@ -80,7 +86,6 @@ module.exports = {
             allowTaggedTemplates: true,
           },
         ],
-        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {
@@ -89,7 +94,6 @@ module.exports = {
             argsIgnorePattern: 'req|res|next|^err|^_',
           },
         ],
-        'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': [
           'warn',
           {
@@ -98,7 +102,6 @@ module.exports = {
             typedefs: false,
           },
         ],
-        'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
         '@typescript-eslint/prefer-optional-chain': 'warn',
       },
