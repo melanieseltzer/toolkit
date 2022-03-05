@@ -5,14 +5,14 @@
   "description": "Example mixed JavaScript/TypeScript project.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint . --resolve-plugins-relative-to ."
   },
   "keywords": [],
   "author": "",
   "dependencies": {},
   "devDependencies": {
-    "@mels/eslint-config-base": "0.1.0",
-    "@mels/eslint-config-typescript": "0.0.0",
+    "@mels/eslint-config-base": "0.0.0-prerelease-5262757-20220305214952",
+    "@mels/eslint-config-typescript": "0.0.0-prerelease-5262757-20220305214952",
     "eslint": "7.32.0",
     "typescript": "4.4.3"
   }
