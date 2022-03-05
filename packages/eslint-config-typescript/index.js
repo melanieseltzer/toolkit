@@ -77,6 +77,7 @@ module.exports = {
             format: ['PascalCase'],
           },
         ],
+        '@typescript-eslint/no-explicit-any': 'off', // sometimes necessary...
         '@typescript-eslint/no-unnecessary-condition': 'warn',
         '@typescript-eslint/no-unused-expressions': [
           'warn',
@@ -89,6 +90,8 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {
+            // `hello` is ignored because we only need `rest`
+            // const { hello, ...rest } = someObj;
             ignoreRestSiblings: true,
             varsIgnorePattern: '^_',
             argsIgnorePattern: 'req|res|next|^err|^_',
