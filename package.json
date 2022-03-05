@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "repository": "git@github.com:melanieseltzer/toolkit.git",
   "license": "MIT",
   "scripts": {
     "affected:lint": "nx affected:lint",
     "affected:depgraph": "nx affected:dep-graph",
-    "lint:workspace": "nx workspace-lint && eslint .",
+    "lint:workspace": "nx workspace-lint && eslint . --ignore-pattern examples/",
     "lint:projects": "nx run-many --target=lint --all",
     "lint": "yarn lint:workspace && yarn lint:projects",
     "changeset": "changeset",
