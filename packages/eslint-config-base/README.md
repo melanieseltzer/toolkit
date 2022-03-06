@@ -49,17 +49,6 @@ module.exports = {
 };
 ```
 
-This package also exposes [a browser config](https://github.com/melanieseltzer/toolkit/blob/main/packages/eslint-config-base/browser.js) if you're in the browser:
-
-```js
-// .eslintrc.js
-
-module.exports = {
-  extends: ['@mels/base/browser'],
-  // ... additional config
-};
-```
-
 ## Credits
 
 - Toolkit logo by <a href="https://www.flaticon.com/authors/creatype" title="Creatype">Creatype</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

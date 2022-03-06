@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "Shareable base JS ESLint config.",
   "main": "./index.js",
-  "exports": {
-    ".": "./index.js",
-    "./browser": "./browser.js"
-  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"

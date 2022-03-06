@@ -2,4 +2,4 @@
 '@mels/eslint-config-base': minor
 ---
 
-Expose a browser config and other fixes
+Create a browser config and other fixes to the base config

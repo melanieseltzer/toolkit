@@ -1,5 +1,6 @@
 const configs = [
   './configs/best-practices',
+  './configs/browser',
   './configs/es6',
   './configs/imports',
   './configs/style',
@@ -15,6 +16,7 @@ module.exports = {
   ],
 
   env: {
+    commonjs: true,
     node: true,
   },
 
