@@ -1,6 +1,8 @@
 const restrictedGlobals = require('confusing-browser-globals');
 
 module.exports = {
+  extends: ['./index.js'],
+
   env: {
     browser: true,
   },

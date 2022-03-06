@@ -44,8 +44,19 @@ yarn add @mels/eslint-config-base --dev
 // .eslintrc.js
 
 module.exports = {
-  extends: ['@mels/base']
-  // ... etc
+  extends: ['@mels/base'],
+  // ... additional config
+};
+```
+
+This package also exposes [a browser config](https://github.com/melanieseltzer/toolkit/blob/main/packages/eslint-config-base/browser.js) if you're in the browser:
+
+```js
+// .eslintrc.js
+
+module.exports = {
+  extends: ['@mels/base/browser'],
+  // ... additional config
 };
 ```
 

@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Shareable base JS ESLint config.",
   "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./browser": "./browser.js"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -17,7 +21,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "confusing-browser-globals": "^1.0.11",
+    "confusing-browser-globals": "1.0.11",
     "eslint-plugin-import": "^2.25.4"
   },
   "peerDependencies": {

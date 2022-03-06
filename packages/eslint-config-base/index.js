@@ -1,6 +1,5 @@
 const rules = [
   './rules/best-practices',
-  './rules/browser',
   './rules/es6',
   './rules/imports',
   './rules/style',
@@ -16,7 +15,6 @@ module.exports = {
   ],
 
   env: {
-    commonjs: true,
     node: true,
   },
 
