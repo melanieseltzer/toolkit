@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Allow shared ESLint configs to bring along their own plugins.",
   "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"

@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Shareable base JS ESLint config.",
   "main": "./index.js",
+  "files": [
+    "index.js",
+    "configs"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
