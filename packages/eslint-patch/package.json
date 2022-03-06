@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-patch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Allow shared ESLint configs to bring along their own plugins.",
   "main": "./index.js",
   "files": [

@@ -1,5 +1,11 @@
 # @mels/eslint-patch
 
+## 1.0.2
+
+### Patch Changes
+
+- [#13](https://github.com/melanieseltzer/toolkit/pull/13) [`67cc7a8`](https://github.com/melanieseltzer/toolkit/commit/67cc7a89ae0eb7c566ab3fa09b5b5cfc1c9a6f52) Thanks [@melanieseltzer](https://github.com/melanieseltzer)! - Add to package.json files field to stop certain files being installed
+
 ## 1.0.1
 
 ### Patch Changes
