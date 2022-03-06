@@ -10,7 +10,7 @@
   "scripts": {
     "affected:lint": "nx affected:lint",
     "affected:depgraph": "nx affected:dep-graph",
-    "lint:workspace": "nx workspace-lint && eslint .",
+    "lint:workspace": "nx workspace-lint && eslint . --ignore-pattern examples/",
     "lint:projects": "nx run-many --target=lint --all",
     "lint": "yarn lint:workspace && yarn lint:projects",
     "changeset": "changeset",
@@ -26,6 +26,7 @@
     "@nrwl/workspace": "13.4.3",
     "@types/node": "14.14.33",
     "eslint": "7.32.0",
+    "eslint-plugin-import": "2.25.4",
     "prettier": "2.5.1",
     "typescript": "4.4.3"
   }
