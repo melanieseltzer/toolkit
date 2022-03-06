@@ -1,5 +1,6 @@
 const rules = [
   './rules/best-practices',
+  './rules/browser',
   './rules/es6',
   './rules/imports',
   './rules/style',
@@ -13,6 +14,11 @@ module.exports = {
 
     ...rules,
   ],
+
+  env: {
+    commonjs: true,
+    node: true,
+  },
 
   parserOptions: {
     ecmaVersion: 2018,
