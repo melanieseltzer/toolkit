@@ -10,11 +10,10 @@ module.exports = {
     'no-unused-vars': [
       'warn',
       {
-        // `hello` is ignored because we only need `rest`
-        // const { hello, ...rest } = someObj;
+        args: 'none',
         ignoreRestSiblings: true,
         varsIgnorePattern: '^_',
-        argsIgnorePattern: 'req|res|next|^err|^_',
+        argsIgnorePattern: '^_',
       },
     ],
   },
