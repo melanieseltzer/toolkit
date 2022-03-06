@@ -1,9 +1,10 @@
-const rules = [
-  './rules/best-practices',
-  './rules/es6',
-  './rules/imports',
-  './rules/style',
-  './rules/variables',
+const configs = [
+  './configs/best-practices',
+  './configs/browser',
+  './configs/es6',
+  './configs/imports',
+  './configs/style',
+  './configs/variables',
 ].map(require.resolve);
 
 module.exports = {
@@ -11,8 +12,13 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/main/conf/eslint-recommended.js
     'eslint:recommended',
 
-    ...rules,
+    ...configs,
   ],
+
+  env: {
+    commonjs: true,
+    node: true,
+  },
 
   parserOptions: {
     ecmaVersion: 2018,

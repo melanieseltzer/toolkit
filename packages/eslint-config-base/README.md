@@ -44,8 +44,8 @@ yarn add @mels/eslint-config-base --dev
 // .eslintrc.js
 
 module.exports = {
-  extends: ['@mels/base']
-  // ... etc
+  extends: ['@mels/base'],
+  // ... additional config
 };
 ```
 
