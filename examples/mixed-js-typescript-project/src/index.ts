@@ -7,7 +7,7 @@ const someObj = {
   world: 'world',
 };
 
-// rest siblings are ignored
+// `hello` isn't flagged because rest siblings are ignored
 const { hello, ...rest } = someObj;
 
 export function blah(hi: any, ...hello_world: any) {

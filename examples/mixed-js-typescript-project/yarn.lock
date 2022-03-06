@@ -52,18 +52,18 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@mels/eslint-config-base@0.0.0-prerelease-5262757-20220305214952":
-  version "0.0.0-prerelease-5262757-20220305214952"
-  resolved "https://registry.yarnpkg.com/@mels/eslint-config-base/-/eslint-config-base-0.0.0-prerelease-5262757-20220305214952.tgz#158cebbb47cc821820e957856cfcf034229ca605"
-  integrity sha512-qPh3TT/X2uOtETHe4rM0i2QentRuT25ISgg9uEZY/tFK3HOBT2qc1CNq+dy/D6zSjxs6a4dquJIc7j7y8WqYrg==
+"@mels/eslint-config-base@0.0.0-prerelease-c845b34-20220306193021":
+  version "0.0.0-prerelease-c845b34-20220306193021"
+  resolved "https://registry.yarnpkg.com/@mels/eslint-config-base/-/eslint-config-base-0.0.0-prerelease-c845b34-20220306193021.tgz#0e873af461834e8c434daf9c669bf9b9f40d1713"
+  integrity sha512-fUZRC2nOD4bbojqjv+kVJ4kjfW85muwQ/ybkrF+RNov0Gky8kLcku3T048J8/pzaBS+UQU8LOcu/rheTPOaxkg==
   dependencies:
-    confusing-browser-globals "^1.0.11"
-    eslint-plugin-import "^2.25.4"
+    confusing-browser-globals "1.0.11"
+    eslint-plugin-import "2.25.4"
 
-"@mels/eslint-config-typescript@0.0.0-prerelease-5262757-20220305214952":
-  version "0.0.0-prerelease-5262757-20220305214952"
-  resolved "https://registry.yarnpkg.com/@mels/eslint-config-typescript/-/eslint-config-typescript-0.0.0-prerelease-5262757-20220305214952.tgz#63143e2e75d16da45cc127e0d650f65dc68beaf0"
-  integrity sha512-uaPV11VaPzMwOCYdj6C5mRkQpHP2K5FH3drNbOBlMc5//gwZFo+zp+uaS6wmiUXWvuCVLa85clYMTxPJPYUD0w==
+"@mels/eslint-config-typescript@0.0.0-prerelease-c845b34-20220306193021":
+  version "0.0.0-prerelease-c845b34-20220306193021"
+  resolved "https://registry.yarnpkg.com/@mels/eslint-config-typescript/-/eslint-config-typescript-0.0.0-prerelease-c845b34-20220306193021.tgz#e921f95dade085a12d570700d60a648d143364fd"
+  integrity sha512-sDVoy0ePU6VUZFNKtMHAxDAMK8qMVLdTb/xYOl4ofgj0ZxveJkNV9GDkjaqFC0TnX8lys0H6xj6XkT/tJeBi7g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.28.1"
     "@typescript-eslint/parser" "^4.28.1"
@@ -341,7 +341,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
-confusing-browser-globals@^1.0.11:
+confusing-browser-globals@1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
@@ -493,7 +493,7 @@ eslint-module-utils@^2.7.2:
     debug "^3.2.7"
     find-up "^2.1.0"
 
-eslint-plugin-import@^2.25.4:
+eslint-plugin-import@2.25.4, eslint-plugin-import@^2.25.4:
   version "2.25.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.4.tgz#322f3f916a4e9e991ac7af32032c25ce313209f1"
   integrity sha512-/KJBASVFxpu0xg1kIBn9AUa8hQVnszpwgE7Ld0lKAlx7Ie87yzEzCgSkekt+le/YVhiaosO4Y14GDAOc41nfxA==

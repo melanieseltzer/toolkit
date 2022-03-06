@@ -49,23 +49,23 @@ module.exports = {
 };
 ```
 
-If your project is part of a monorepo, you may need to add some additional configuration:
+If your project is part of a monorepo, you may need to add some additional configuration to help ESLint find your `tsconfig.json`:
 
-```js
+```diff
 // .eslintrc.js
 
 module.exports = {
-  extends: ['@mels/typescript'],
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project: `${__dirname}/tsconfig.json`,
-      },
-    },
-  },
+  extends: ['@mels/base', '@mels/typescript'],
++  parserOptions: {
++    tsconfigRootDir: __dirname,
++  },
++  settings: {
++    'import/resolver': {
++      typescript: {
++        project: `${__dirname}/tsconfig.json`,
++      },
++    },
++  },
 };
 ```
 
