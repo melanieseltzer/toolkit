@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Shareable TypeScript ESLint config.",
   "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
