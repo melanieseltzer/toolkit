@@ -1,7 +1,6 @@
 name: Pre-release
 
-on:
-  pull_request:
+on: pull_request
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -11,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Use Node.js 14.x
         uses: actions/setup-node@v2
