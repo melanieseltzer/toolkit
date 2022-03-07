@@ -1,0 +1,5 @@
+{
+  "root": "packages/eslint-config-react",
+  "sourceRoot": "packages/eslint-config-react",
+  "projectType": "library"
+}
