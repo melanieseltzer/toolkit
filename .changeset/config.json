@@ -4,5 +4,6 @@
     { "repo": "melanieseltzer/toolkit" }
   ],
   "access": "public",
-  "baseBranch": "main"
+  "baseBranch": "main",
+  "ignore": ["mixed-js-typescript-project"]
 }
