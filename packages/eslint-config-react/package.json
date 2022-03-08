@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Shareable React ESLint config.",
   "main": "./index.js",
-  "private": true,
   "files": [
     "index.js"
   ],
