@@ -1,0 +1,32 @@
+{
+  "name": "@mels/eslint-config-jest",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shareable Jest ESLint config.",
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/eslint-config-jest"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-jest#readme",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "26.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0 || ^7.32.0"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  }
+}

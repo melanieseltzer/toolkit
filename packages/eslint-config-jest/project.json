@@ -1,0 +1,5 @@
+{
+  "root": "packages/eslint-config-jest",
+  "sourceRoot": "packages/eslint-config-jest",
+  "projectType": "library"
+}

@@ -27,8 +27,6 @@ module.exports = {
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/index.js#L43
     'plugin:jsx-a11y/recommended',
 
-    // TODO: make separate configs
-    require.resolve('./jest'),
     require.resolve('./react-testing-library'),
   ],
 
