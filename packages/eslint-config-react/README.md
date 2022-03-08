@@ -49,6 +49,17 @@ module.exports = {
 };
 ```
 
+If you're using [React Testing Library](https://testing-library.com/), this package also exports a `testing-library` config:
+
+```js
+// .eslintrc.js
+
+module.exports = {
+  extends: ['@mels/base', '@mels/react', '@mels/react/testing-library'],
+  // ... rest of config
+};
+```
+
 ## Credits
 
 - Toolkit logo by <a href="https://www.flaticon.com/authors/creatype" title="Creatype">Creatype</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
