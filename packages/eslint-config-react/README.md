@@ -60,6 +60,17 @@ module.exports = {
 };
 ```
 
+This package also exports a `jsx-runtime` config, if you're using the [new JSX transform from React 17](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports).
+
+```js
+// .eslintrc.js
+
+module.exports = {
+  extends: ['@mels/base', '@mels/react', '@mels/react/jsx-runtime'],
+  // ... rest of config
+};
+```
+
 ## Credits
 
 - Toolkit logo by <a href="https://www.flaticon.com/authors/creatype" title="Creatype">Creatype</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

@@ -5,11 +5,13 @@
   "main": "./index.js",
   "exports": {
     ".": "./index.js",
-    "./testing-library": "./react-testing-library.js"
+    "./testing-library": "./react-testing-library.js",
+    "./jsx-runtime": "./jsx-runtime.js"
   },
   "files": [
     "index.js",
-    "react-testing-library.js"
+    "react-testing-library.js",
+    "jsx-runtime.js"
   ],
   "license": "MIT",
   "publishConfig": {

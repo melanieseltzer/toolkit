@@ -4,6 +4,7 @@ module.exports = {
     '@mels/typescript',
     '@mels/react',
     '@mels/react/testing-library',
+    '@mels/react/jsx-runtime',
     '@mels/jest',
   ],
   parserOptions: {
