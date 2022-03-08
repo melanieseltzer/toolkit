@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "description": "Shareable React ESLint config.",
   "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./testing-library": "./react-testing-library.js"
+  },
   "files": [
-    "index.js"
+    "index.js",
+    "react-testing-library.js"
   ],
   "license": "MIT",
   "publishConfig": {

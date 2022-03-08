@@ -26,8 +26,6 @@ module.exports = {
 
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/index.js#L43
     'plugin:jsx-a11y/recommended',
-
-    require.resolve('./react-testing-library'),
   ],
 
   overrides: [

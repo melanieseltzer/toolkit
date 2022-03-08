@@ -1,5 +1,11 @@
 module.exports = {
-  extends: ['@mels/base', '@mels/typescript', '@mels/react', '@mels/jest'],
+  extends: [
+    '@mels/base',
+    '@mels/typescript',
+    '@mels/react',
+    '@mels/react/testing-library',
+    '@mels/jest',
+  ],
   parserOptions: {
     tsconfigRootDir: __dirname,
   },

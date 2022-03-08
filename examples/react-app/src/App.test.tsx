@@ -9,6 +9,10 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('', () => {
-  console.log('hi');
+describe('test', () => {
+  test('asdf', () => {
+    screen.getByText('foo');
+
+    expect(test).toBeTruthy();
+  });
 });

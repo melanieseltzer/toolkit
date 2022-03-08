@@ -10,9 +10,9 @@ module.exports = {
       ],
       rules: {
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-explicit-assert.md
-        'testing-library/prefer-explicit-assert': 'error',
+        'testing-library/prefer-explicit-assert': 'warn',
         // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-wait-for.md
-        'testing-library/prefer-wait-for': 'error',
+        'testing-library/prefer-wait-for': 'warn',
       },
     },
   ],
