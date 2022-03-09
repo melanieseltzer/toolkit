@@ -22,7 +22,13 @@
 
 ## ✨ Features
 
-This package contains all my React rules as an extensible shared ESLint config.
+This package contains all my React-related rules as an extensible shared ESLint config.
+
+- React ([eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react))
+- React Hooks ([eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks))
+- JSX A11y (accessibility rules) ([eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y))
+- React Testing Library ([eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)) (if extended with `@mels/react/testing-library`)
+- JSX runtime config (if extended with `@mels/react/jsx-runtime`)
 
 ## Install
 

@@ -1,6 +1,17 @@
 module.exports = {
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
 
+  extends: [
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L125
+    'plugin:react/recommended',
+
+    // https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/src/index.js#L14
+    'plugin:react-hooks/recommended',
+
+    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/index.js#L43
+    'plugin:jsx-a11y/recommended',
+  ],
+
   env: {
     browser: true,
   },
@@ -16,17 +27,6 @@ module.exports = {
       version: 'detect',
     },
   },
-
-  extends: [
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L125
-    'plugin:react/recommended',
-
-    // https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/src/index.js#L14
-    'plugin:react-hooks/recommended',
-
-    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/index.js#L43
-    'plugin:jsx-a11y/recommended',
-  ],
 
   overrides: [
     {
