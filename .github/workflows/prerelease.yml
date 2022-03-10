@@ -5,6 +5,7 @@ on: pull_request
 jobs:
   publish_prerelease:
     runs-on: ubuntu-latest
+    if: github.repository == 'melanieseltzer/toolkit'
     steps:
       - uses: actions/checkout@v2
 
