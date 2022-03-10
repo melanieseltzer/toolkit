@@ -3,7 +3,7 @@ const allExtensions = ['.js', '.jsx', '.mjs', '.json', '.ts', '.tsx'];
 module.exports = {
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['**/*.ts?(x)'],
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {

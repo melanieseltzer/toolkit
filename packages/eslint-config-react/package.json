@@ -1,0 +1,41 @@
+{
+  "name": "@mels/eslint-config-react",
+  "version": "0.0.0",
+  "description": "Shareable React ESLint config.",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./testing-library": "./react-testing-library.js",
+    "./jsx-runtime": "./jsx-runtime.js"
+  },
+  "files": [
+    "index.js",
+    "react-testing-library.js",
+    "jsx-runtime.js"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/eslint-config-react"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-react#readme",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-testing-library": "5.0.6"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0 || ^7.32.0"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  }
+}
