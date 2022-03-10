@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-config-react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shareable React ESLint config.",
   "main": "./index.js",
   "exports": {

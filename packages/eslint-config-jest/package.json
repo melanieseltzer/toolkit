@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-config-jest",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shareable Jest ESLint config.",
   "main": "./index.js",
   "files": [
