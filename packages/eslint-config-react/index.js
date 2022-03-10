@@ -32,15 +32,13 @@ module.exports = {
     {
       files: ['*.tsx'],
       rules: {
-        // no need for PropTypes if using TypeScript
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
         'react/prop-types': 'off',
       },
     },
   ],
 
   rules: {
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-    'react/display-name': 'off',
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
     'react/jsx-key': [
       'warn',
