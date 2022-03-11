@@ -5,12 +5,10 @@ on:
     branches:
       - main
 
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
   publish_release:
     runs-on: ubuntu-latest
+    if: github.repository == 'melanieseltzer/toolkit'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -23,6 +21,8 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
@@ -30,3 +30,4 @@ jobs:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,32 +1,31 @@
 name: Pre-release
 
-on:
-  pull_request:
-
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+on: pull_request
 
 jobs:
   publish_prerelease:
     runs-on: ubuntu-latest
+    if: github.repository == 'melanieseltzer/toolkit'
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Use Node.js 14.x
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Create .npmrc
+      - name: Creating .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install Dependencies
         run: yarn
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish Pre-release
         run: |
@@ -36,3 +35,4 @@ jobs:
           yarn changeset publish --tag prerelease
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
