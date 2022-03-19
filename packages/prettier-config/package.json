@@ -1,0 +1,28 @@
+{
+  "name": "@mels/prettier-config",
+  "description": "Prettier rules as a shareable configuration.",
+  "main": "./prettier.config.js",
+  "files": [
+    "prettier.config.js"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/prettier-config"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/prettier-config#readme",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "prettier": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=12.17.0"
+  }
+}

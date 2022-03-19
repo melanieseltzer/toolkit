@@ -1,0 +1,5 @@
+{
+  "root": "packages/prettier-config",
+  "sourceRoot": "packages/prettier-config",
+  "projectType": "library"
+}
