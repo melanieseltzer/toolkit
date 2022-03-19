@@ -1,0 +1,31 @@
+{
+  "name": "@mels/eslint-config-prettier",
+  "description": "Shareable ESLint config for Prettier.",
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/toolkit.git",
+    "directory": "packages/eslint-config-prettier"
+  },
+  "homepage": "https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-prettier#readme",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0 || ^7.32.0"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  }
+}

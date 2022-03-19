@@ -1,0 +1,5 @@
+{
+  "root": "packages/eslint-config-prettier",
+  "sourceRoot": "packages/eslint-config-prettier",
+  "projectType": "library"
+}

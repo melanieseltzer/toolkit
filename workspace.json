@@ -3,6 +3,7 @@
   "projects": {
     "eslint-config-base": "packages/eslint-config-base",
     "eslint-config-jest": "packages/eslint-config-jest",
+    "eslint-config-prettier": "packages/eslint-config-prettier",
     "eslint-config-react": "packages/eslint-config-react",
     "eslint-config-typescript": "packages/eslint-config-typescript",
     "eslint-patch": "packages/eslint-patch"
