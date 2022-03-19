@@ -1,5 +1,6 @@
 {
   "name": "@mels/prettier-config",
+  "version": "0.0.0",
   "description": "Prettier rules as a shareable configuration.",
   "main": "./prettier.config.js",
   "files": [
