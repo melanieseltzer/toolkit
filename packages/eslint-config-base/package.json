@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "confusing-browser-globals": "1.0.11",
-    "eslint-plugin-import": "2.25.4"
+    "eslint-plugin-import": "^2.25.4"
   },
   "peerDependencies": {
     "eslint": "^7.32.0 || ^8.0.0"

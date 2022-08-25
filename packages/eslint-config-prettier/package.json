@@ -20,11 +20,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "peerDependencies": {
-    "eslint": "^7.32.0 || ^8.0.0"
+    "eslint": "^7.32.0 || ^8.0.0",
+    "prettier": ">=2.0.0"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
