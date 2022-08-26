@@ -22,7 +22,7 @@
 
 ## ✨ Features
 
-This package contains all my base JS rules as an extensible shared config.
+This package contains all my common base JS rules as an extensible shared config.
 
 ## Install
 
@@ -35,8 +35,18 @@ npm install @mels/eslint-config-base --save-dev
 With yarn:
 
 ```bash
-yarn add @mels/eslint-config-base --dev
+yarn add -D @mels/eslint-config-base
 ```
+
+## ⚠️ Important Note
+
+`@mels/eslint-config-base` is the only preset that is **required** when using other toolkit packages, and must always be first in the `extends` array.
+
+It uses [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch) under the hood to fix a [longstanding issue](https://github.com/eslint/eslint/issues/3458) with shareable configs not allowing plugins as dependencies.
+
+Having the patch added internally here in the base config was an intentional decision so that the consumer never has to worry about adding it themselves.
+
+The tradeoff is of course that the configs need to be referenced in a particular order, with `@mels/base` always being first.
 
 ## How To Use
 
@@ -44,8 +54,11 @@ yarn add @mels/eslint-config-base --dev
 // .eslintrc.js
 
 module.exports = {
-  extends: ['@mels/base'],
-  // ... additional config
+  extends: [
+    '@mels/base', // must always be first in the extends array
+    // ... any other toolkit packages
+  ],
+  // ... any additional project-specific overrides
 };
 ```
 
