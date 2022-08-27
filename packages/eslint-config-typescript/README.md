@@ -35,7 +35,7 @@ npm install @mels/eslint-config-typescript --save-dev
 With yarn:
 
 ```bash
-yarn add @mels/eslint-config-typescript --dev
+yarn add -D @mels/eslint-config-typescript
 ```
 
 ## How To Use
@@ -45,27 +45,18 @@ yarn add @mels/eslint-config-typescript --dev
 
 module.exports = {
   extends: ['@mels/base', '@mels/typescript'],
+  parserOptions: {
+    project: './tsconfig.json', // path to project's tsconfig
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        // specify the project config path if different from default <root>/tsconfig.json
+        project: './tsconfig.eslint.json',
+      },
+    },
+  },
   // ... rest of config
-};
-```
-
-If your project is part of a monorepo, you may need to add some additional configuration to help ESLint find your `tsconfig.json`:
-
-```diff
-// .eslintrc.js
-
-module.exports = {
-  extends: ['@mels/base', '@mels/typescript'],
-+  parserOptions: {
-+    tsconfigRootDir: __dirname,
-+  },
-+  settings: {
-+    'import/resolver': {
-+      typescript: {
-+        project: `${__dirname}/tsconfig.json`,
-+      },
-+    },
-+  },
 };
 ```
 

@@ -7,9 +7,7 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: 'tsconfig.json',
         createDefaultProgram: true,
-        tsconfigRootDir: './',
       },
       extends: [
         // Disables rules that are already checked by the TypeScript compiler.
@@ -32,7 +30,6 @@ module.exports = {
           // Turns on the typescript resolver
           // https://github.com/alexgorbatchev/eslint-import-resolver-typescript#readme
           typescript: {
-            project: './tsconfig.json',
             alwaysTryTypes: true,
           },
         },
