@@ -50,7 +50,7 @@ Add a require() call to the to top of the `.eslintrc.js` file in the project tha
 require('@mels/eslint-patch');
 
 module.exports = {
-  extends: ['@mels']
+  extends: ['@mels'],
   // ... etc
 };
 ```
