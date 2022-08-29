@@ -21,10 +21,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "confusing-browser-globals": "1.0.11",
-    "eslint-plugin-import": "2.25.4"
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-plugin-import": "^2.26.0"
   },
   "peerDependencies": {
-    "eslint": "^6.8.0 || ^7.32.0"
+    "eslint": "^7.32.0 || ^8.0.0"
   }
 }
