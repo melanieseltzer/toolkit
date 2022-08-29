@@ -22,8 +22,5 @@
   "dependencies": {},
   "peerDependencies": {
     "prettier": "^2.4.0"
-  },
-  "engines": {
-    "node": ">=12.17.0"
   }
 }
