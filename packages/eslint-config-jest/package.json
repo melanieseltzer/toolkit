@@ -23,6 +23,6 @@
     "eslint-plugin-jest": "26.1.1"
   },
   "peerDependencies": {
-    "eslint": "^6.8.0 || ^7.32.0"
+    "eslint": "^7.32.0 || ^8.0.0"
   }
 }
