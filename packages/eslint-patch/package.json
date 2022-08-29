@@ -20,6 +20,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "1.1.0"
+    "@rushstack/eslint-patch": "^1.1.4"
   }
 }
