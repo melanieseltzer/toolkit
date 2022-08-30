@@ -7,6 +7,7 @@ module.exports = {
     '@mels/react/testing-library',
     '@mels/react/jsx-runtime',
     '@mels/jest',
+    '@mels/prettier',
   ],
   parserOptions: {
     tsconfigRootDir: __dirname,

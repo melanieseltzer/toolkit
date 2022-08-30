@@ -70,7 +70,7 @@ If you need to extend the config, you can do so with `.prettierrc.js` or `pretti
 // prettier.config.js or .prettierrc.js
 module.exports = {
   ...require('@mels/prettier-config'), // import the package
-  semi: false // add modifications
+  semi: false, // add modifications
 };
 ```
 

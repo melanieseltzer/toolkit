@@ -1,15 +1,15 @@
 module.exports = {
   extends: [
     // https://github.com/import-js/eslint-plugin-import/blob/main/config/recommended.js
-    'plugin:import/recommended'
+    'plugin:import/recommended',
   ],
 
   settings: {
     // https://github.com/import-js/eslint-plugin-import#resolvers
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.mjs', '.json']
-      }
+        extensions: ['.js', '.jsx', '.mjs', '.json'],
+      },
     },
 
     // File extensions that will be parsed as modules and inspected for exports
@@ -18,7 +18,7 @@ module.exports = {
 
     // Will not report the matching module if no exports are found
     // https://github.com/import-js/eslint-plugin-import#importignore
-    'import/ignore': ['node_modules', '\\.(scss|css|less|hbs|svg|json)$']
+    'import/ignore': ['node_modules', '\\.(scss|css|less|hbs|svg|json)$'],
   },
 
   rules: {
@@ -31,8 +31,8 @@ module.exports = {
       {
         js: 'never',
         mjs: 'never',
-        jsx: 'never'
-      }
+        jsx: 'never',
+      },
     ],
 
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
@@ -52,12 +52,12 @@ module.exports = {
           'internal',
           'parent',
           'sibling',
-          'index'
+          'index',
         ],
         alphabetize: {
-          order: 'asc'
-        }
-      }
+          order: 'asc',
+        },
+      },
     ],
 
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
@@ -84,10 +84,10 @@ module.exports = {
           '**/webpack.config.*.js',
           '**/rollup.config.js',
           '**/rollup.config.*.js',
-          '**/.eslintrc.js'
+          '**/.eslintrc.js',
         ],
-        peerDependencies: true
-      }
+        peerDependencies: true,
+      },
     ],
 
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-mutable-exports.md
@@ -101,11 +101,11 @@ module.exports = {
       'error',
       {
         commonjs: true,
-        caseSensitive: true
-      }
+        caseSensitive: true,
+      },
     ],
 
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-useless-path-segments.md
-    'import/no-useless-path-segments': ['warn', { commonjs: true }]
-  }
+    'import/no-useless-path-segments': ['warn', { commonjs: true }],
+  },
 };

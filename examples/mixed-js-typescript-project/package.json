@@ -11,7 +11,9 @@
   "author": "",
   "devDependencies": {
     "@mels/eslint-config-base": "0.2.0",
+    "@mels/eslint-config-prettier": "0.1.0",
     "@mels/eslint-config-typescript": "0.1.1",
+    "@mels/prettier-config": "0.1.0",
     "eslint": "^8.23.0",
     "typescript": "^4.7.4"
   }

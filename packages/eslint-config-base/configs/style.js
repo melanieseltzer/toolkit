@@ -10,8 +10,8 @@ module.exports = {
     'no-else-return': [
       'warn',
       {
-        allowElseIf: false
-      }
+        allowElseIf: false,
+      },
     ],
 
     // https://eslint.org/docs/rules/no-lonely-if#disallow-if-statements-as-the-only-statement-in-else-blocks-no-lonely-if
@@ -33,6 +33,6 @@ module.exports = {
     'operator-assignment': 'warn',
 
     // https://eslint.org/docs/rules/yoda#require-or-disallow-yoda-conditions-yoda
-    yoda: 'warn'
-  }
+    yoda: 'warn',
+  },
 };

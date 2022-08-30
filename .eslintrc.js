@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@mels/base'],
+  extends: ['@mels/base', '@mels/prettier'],
 };
