@@ -9,8 +9,8 @@ module.exports = {
       {
         // allow to skip a default by commenting:
         // skip default
-        commentPattern: '^skip\\sdefault'
-      }
+        commentPattern: '^skip\\sdefault',
+      },
     ],
 
     // https://eslint.org/docs/rules/dot-notation#require-dot-notation-dot-notation
@@ -35,8 +35,8 @@ module.exports = {
     'no-console': [
       'warn',
       {
-        allow: ['warn', 'error', 'info', 'table']
-      }
+        allow: ['warn', 'error', 'info', 'table'],
+      },
     ],
 
     // https://eslint.org/docs/rules/no-constructor-return#disallow-returning-value-in-constructor-no-constructor-return
@@ -75,10 +75,10 @@ module.exports = {
           ['&', '|', '^', '~', '<<', '>>', '>>>'],
           ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
           ['&&', '||'],
-          ['in', 'instanceof']
+          ['in', 'instanceof'],
         ],
-        allowSamePrecedence: false
-      }
+        allowSamePrecedence: false,
+      },
     ],
 
     // https://eslint.org/docs/rules/no-new#disallow-new-for-side-effects-no-new
@@ -120,8 +120,8 @@ module.exports = {
       {
         allowShortCircuit: true,
         allowTernary: true,
-        allowTaggedTemplates: true
-      }
+        allowTaggedTemplates: true,
+      },
     ],
 
     // https://eslint.org/docs/rules/no-useless-call#disallow-unnecessary-call-and-apply-no-useless-call
@@ -131,6 +131,6 @@ module.exports = {
     'no-useless-escape': 'warn',
 
     // https://eslint.org/docs/rules/radix#require-radix-parameter-radix
-    radix: 'error'
-  }
+    radix: 'error',
+  },
 };

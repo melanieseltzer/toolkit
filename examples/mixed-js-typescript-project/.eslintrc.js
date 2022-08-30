@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@mels/base', '@mels/typescript'],
+  extends: ['@mels/base', '@mels/typescript', '@mels/prettier'],
   parserOptions: {
     tsconfigRootDir: __dirname,
   },

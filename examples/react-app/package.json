@@ -19,8 +19,10 @@
   "devDependencies": {
     "@mels/eslint-config-base": "0.2.0",
     "@mels/eslint-config-jest": "0.1.0",
+    "@mels/eslint-config-prettier": "0.1.0",
     "@mels/eslint-config-react": "0.1.0",
-    "@mels/eslint-config-typescript": "0.1.1"
+    "@mels/eslint-config-typescript": "0.1.1",
+    "@mels/prettier-config": "0.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
