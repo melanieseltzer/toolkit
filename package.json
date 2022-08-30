@@ -25,7 +25,7 @@
     "@nrwl/workspace": "13.4.3",
     "@types/node": "14.14.33",
     "eslint": "^8.23.0",
-    "prettier": "2.5.1",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }
