@@ -13,6 +13,6 @@ module.exports = {
   singleAttributePerLine: false,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'none',
+  trailingComma: 'es5',
   useTabs: false
 };
