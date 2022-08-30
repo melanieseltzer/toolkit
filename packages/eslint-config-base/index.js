@@ -1,3 +1,6 @@
+// This is a workaround for: https://github.com/eslint/eslint/issues/3458
+require('@mels/eslint-patch');
+
 const configs = [
   './configs/best-practices',
   './configs/browser',

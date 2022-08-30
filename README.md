@@ -19,13 +19,13 @@
 
 ### Linting / formatting
 
-- [prettier-config](https://github.com/melanieseltzer/toolkit/tree/main/packages/prettier-config#readme)
 - [eslint-patch](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-patch#readme)
 - [eslint-config-base](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-base#readme)
 - [eslint-config-jest](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-jest#readme)
 - [eslint-config-prettier](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-prettier#readme)
 - [eslint-config-react](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-react#readme)
 - [eslint-config-typescript](https://github.com/melanieseltzer/toolkit/tree/main/packages/eslint-config-typescript#readme)
+- [prettier-config](https://github.com/melanieseltzer/toolkit/tree/main/packages/prettier-config#readme)
 
 ## Credits
 
