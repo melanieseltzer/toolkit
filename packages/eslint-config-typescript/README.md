@@ -16,6 +16,7 @@
 <p align="center">
   <a href="#install">Install</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#helpful-links">Helpful Links</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
@@ -40,34 +41,50 @@ yarn add @mels/eslint-config-typescript --dev
 
 ## How To Use
 
+The only config option that is required is `parserOptions.project`, because this config uses rules which require type information.
+
 ```js
 // .eslintrc.js
-
 module.exports = {
   extends: ['@mels/base', '@mels/typescript'],
-  // ... rest of config
+  parserOptions: {
+    project: './tsconfig.json', // Set the path to the project tsconfig. This is required.
+  },
 };
 ```
 
-If your project is part of a monorepo, you may need to add some additional configuration to help ESLint find your `tsconfig.json`:
+Additional config options for `@typescript-eslint/parser` and `eslint-import-resolver-typescript` should be structured like so:
 
-```diff
+```js
 // .eslintrc.js
-
 module.exports = {
   extends: ['@mels/base', '@mels/typescript'],
-+  parserOptions: {
-+    tsconfigRootDir: __dirname,
-+  },
-+  settings: {
-+    'import/resolver': {
-+      typescript: {
-+        project: `${__dirname}/tsconfig.json`,
-+      },
-+    },
-+  },
+
+  // Config options for `@typescript-eslint/parser` should go under `parserOptions`
+  // Please see: https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#configuration
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname, // root directory for relative tsconfig paths specified in the project option above
+    // ...etc
+  },
+
+  settings: {
+    'import/resolver': {
+      // Config options for `eslint-import-resolver-typescript`
+      // Please see: https://github.com/import-js/eslint-import-resolver-typescript#configuration
+      typescript: {
+        project: './tsconfig.eslint.json', // if different from default <root>/tsconfig.json
+      },
+    },
+  },
 };
 ```
+
+## Helpful Links
+
+- [Monorepo configuration help](https://typescript-eslint.io/docs/linting/typed-linting/monorepos/)
+- [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/main/packages/parser#configuration) config options
+- [eslint-import-resolver-typescript](https://github.com/import-js/eslint-import-resolver-typescript#configuration) config options
 
 ## Credits
 
