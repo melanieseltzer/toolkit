@@ -10,13 +10,6 @@ module.exports = {
     '@mels/prettier',
   ],
   parserOptions: {
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project: `${__dirname}/tsconfig.json`,
-      },
-    },
+    project: './tsconfig.json',
   },
 };
