@@ -3,5 +3,6 @@ module.exports = {
   extends: ['@mels/base', '@mels/typescript', '@mels/prettier'],
   parserOptions: {
     project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
 };
