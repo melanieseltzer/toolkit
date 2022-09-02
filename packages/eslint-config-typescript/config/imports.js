@@ -1,5 +1,3 @@
-// Make `eslint-plugin-import` work with TypeScript
-
 const jsExtensions = ['.js', '.jsx', '.mjs'];
 const tsExtensions = ['.ts', '.tsx'];
 const mixedJsAndTsExtensions = [...jsExtensions, ...tsExtensions];
