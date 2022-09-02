@@ -72,30 +72,6 @@ module.exports = {
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-cycle.md
     'import/no-cycle': 'error',
 
-    // Forbid imports that are not declared in the package.json's `dependencies`
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          // ... but allow imports of `devDependencies` inside test/story files
-          '**/*.{test,spec,stories,story}.{js,jsx,ts,tsx}',
-          '**/__tests__/**',
-          '**/__mocks__/**',
-          '**/.storybook/**',
-          '**/stories/**',
-          '**/jest.config.js',
-          '**/jest.setup.js',
-          '**/webpack.config.js',
-          '**/webpack.config.*.js',
-          '**/rollup.config.js',
-          '**/rollup.config.*.js',
-          '**/.eslintrc.js',
-        ],
-        peerDependencies: true,
-      },
-    ],
-
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-mutable-exports.md
     'import/no-mutable-exports': 'error',
 
