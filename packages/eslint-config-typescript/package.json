@@ -4,7 +4,8 @@
   "description": "Shareable TypeScript ESLint config.",
   "main": "./index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "config"
   ],
   "license": "MIT",
   "publishConfig": {
