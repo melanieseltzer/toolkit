@@ -2,12 +2,12 @@
 require('@mels/eslint-patch');
 
 const configs = [
-  './configs/best-practices',
-  './configs/browser',
-  './configs/es6',
-  './configs/imports',
-  './configs/style',
-  './configs/variables',
+  './config/best-practices',
+  './config/browser',
+  './config/es6',
+  './config/imports',
+  './config/style',
+  './config/variables',
 ].map(require.resolve);
 
 module.exports = {

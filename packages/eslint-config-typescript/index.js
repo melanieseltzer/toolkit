@@ -1,5 +1,3 @@
-const allExtensions = ['.js', '.jsx', '.mjs', '.json', '.ts', '.tsx'];
-
 module.exports = {
   overrides: [
     {
@@ -9,54 +7,47 @@ module.exports = {
       parserOptions: {
         createDefaultProgram: true,
       },
+
       extends: [
         // Disables rules that are already checked by the TypeScript compiler.
         // Enables rules that promote using more modern constructs TypeScript allows for.
-        // Turn on recommended TS rules (opinionated)
+        // Turn on recommended TS rules (opinionated).
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         'plugin:@typescript-eslint/recommended',
 
-        // Make eslint-plugin-import work with TypeScript
-        // https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
-        'plugin:import/typescript',
+        // Make `eslint-plugin-import` work with TypeScript
+        require.resolve('./config/imports'),
       ],
-      settings: {
-        // File extensions that will be parsed as modules and inspected for exports
-        'import/extensions': allExtensions,
-        'import/resolver': {
-          node: {
-            extensions: allExtensions,
-          },
-          // Turns on the typescript resolver
-          // https://github.com/alexgorbatchev/eslint-import-resolver-typescript#readme
-          typescript: {
-            alwaysTryTypes: true,
-          },
-        },
-      },
+
       rules: {
-        // Enforces extensions for all import statements
-        // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md
-        'import/extensions': [
+        // -----------------------
+        // Any overrides to `@typescript-eslint` recommended
+        // -----------------------
+
+        // Sometimes necessary when prototyping...
+        // https://typescript-eslint.io/rules/no-explicit-any/
+        '@typescript-eslint/no-explicit-any': 'off',
+
+        // Allow some vars to be unused in specific situations
+        // https://typescript-eslint.io/rules/no-unused-vars/
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
           'warn',
-          'ignorePackages',
-          // ... except for the following:
           {
-            js: 'never',
-            mjs: 'never',
-            jsx: 'never',
-            ts: 'never',
-            tsx: 'never',
+            // `hello` is ignored because we only need `rest`
+            // const { hello, ...rest } = someObj;
+            ignoreRestSiblings: true,
+            varsIgnorePattern: '^_',
+            argsIgnorePattern: 'req|res|next|^err|^_',
           },
         ],
 
-        camelcase: 'off',
-        'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
-        'no-use-before-define': 'off',
-        'no-useless-constructor': 'off',
+        // -----------------------
+        // Anything else not covered in `@typescript-eslint` recommended
+        // -----------------------
 
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        // https://typescript-eslint.io/rules/naming-convention/
+        camelcase: 'off',
         '@typescript-eslint/naming-convention': [
           'warn',
           {
@@ -74,8 +65,12 @@ module.exports = {
             format: ['PascalCase'],
           },
         ],
-        '@typescript-eslint/no-explicit-any': 'off', // sometimes necessary...
+
+        // https://typescript-eslint.io/rules/no-unnecessary-condition/
         '@typescript-eslint/no-unnecessary-condition': 'warn',
+
+        // https://typescript-eslint.io/rules/no-unused-expressions/
+        'no-unused-expressions': 'off',
         '@typescript-eslint/no-unused-expressions': [
           'warn',
           {
@@ -84,16 +79,9 @@ module.exports = {
             allowTaggedTemplates: true,
           },
         ],
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          {
-            // `hello` is ignored because we only need `rest`
-            // const { hello, ...rest } = someObj;
-            ignoreRestSiblings: true,
-            varsIgnorePattern: '^_',
-            argsIgnorePattern: 'req|res|next|^err|^_',
-          },
-        ],
+
+        // https://typescript-eslint.io/rules/no-use-before-define/
+        'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': [
           'warn',
           {
@@ -102,7 +90,12 @@ module.exports = {
             typedefs: false,
           },
         ],
+
+        // https://typescript-eslint.io/rules/no-useless-constructor/
+        'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
+
+        // https://typescript-eslint.io/rules/prefer-optional-chain/
         '@typescript-eslint/prefer-optional-chain': 'warn',
       },
     },

@@ -1,3 +1,5 @@
+const jsExtensions = ['.js', '.jsx', '.mjs'];
+
 module.exports = {
   extends: [
     // https://github.com/import-js/eslint-plugin-import/blob/main/config/recommended.js
@@ -7,14 +9,15 @@ module.exports = {
   settings: {
     // https://github.com/import-js/eslint-plugin-import#resolvers
     'import/resolver': {
+      // https://github.com/import-js/eslint-plugin-import/tree/main/resolvers/node
       node: {
-        extensions: ['.js', '.jsx', '.mjs', '.json'],
+        extensions: [...jsExtensions, '.json'],
       },
     },
 
     // File extensions that will be parsed as modules and inspected for exports
     // https://github.com/import-js/eslint-plugin-import#importextensions
-    'import/extensions': ['.js', '.jsx', '.mjs'],
+    'import/extensions': jsExtensions,
 
     // Will not report the matching module if no exports are found
     // https://github.com/import-js/eslint-plugin-import#importignore
@@ -28,11 +31,14 @@ module.exports = {
       'warn',
       'ignorePackages',
       // ... except for the following:
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-      },
+      jsExtensions.reduce(
+        (finalResult, extension) => ({
+          ...finalResult,
+          // removing the period from the extension
+          [extension.slice(1)]: 'never',
+        }),
+        {}
+      ),
     ],
 
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
