@@ -1,22 +1,24 @@
 module.exports = {
+  extends: [
+    // Make `eslint-plugin-import` work with TypeScript
+    require.resolve('./config/imports'),
+  ],
+
   overrides: [
     {
       files: ['**/*.ts?(x)'],
-      plugins: ['@typescript-eslint'],
-      parser: '@typescript-eslint/parser',
+
       parserOptions: {
         createDefaultProgram: true,
       },
 
       extends: [
-        // Disables rules that are already checked by the TypeScript compiler.
-        // Enables rules that promote using more modern constructs TypeScript allows for.
-        // Turn on recommended TS rules (opinionated).
+        // This recommended config does A LOT of the heavy lifting for us:
+        // - enables the `@typescript-eslint` plugin and `@typescript-eslint/parser` parser.
+        // - disables rules that are already checked by the TypeScript compiler.
+        // - enables rules that promote using more modern constructs TypeScript allows for.
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         'plugin:@typescript-eslint/recommended',
-
-        // Make `eslint-plugin-import` work with TypeScript
-        require.resolve('./config/imports'),
       ],
 
       rules: {

@@ -44,8 +44,19 @@ module.exports = {
         {}
       ),
     ],
-
-    // TypeScript compilation already ensures that named imports exist in the referenced module
-    'import/named': 'off',
   },
+
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      rules: {
+        // -----------------------
+        // Any overrides to `eslint-plugin-import` recommended
+        // -----------------------
+
+        // TypeScript compilation already ensures that named imports exist
+        'import/named': 'off',
+      },
+    },
+  ],
 };
