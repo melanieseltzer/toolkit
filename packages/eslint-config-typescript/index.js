@@ -19,6 +19,9 @@ module.exports = {
         // - enables rules that promote using more modern constructs TypeScript allows for.
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
         'plugin:@typescript-eslint/recommended',
+
+        // Rules that specifically require type information
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
 
       rules: {
