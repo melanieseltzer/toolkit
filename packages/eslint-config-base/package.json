@@ -5,7 +5,7 @@
   "main": "./index.js",
   "files": [
     "index.js",
-    "configs"
+    "config"
   ],
   "license": "MIT",
   "publishConfig": {
@@ -23,7 +23,8 @@
   "dependencies": {
     "@mels/eslint-patch": "^1.0.2",
     "confusing-browser-globals": "^1.0.11",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0"
   },
   "peerDependencies": {
     "eslint": "^7.32.0 || ^8.0.0"
