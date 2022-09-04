@@ -18,4 +18,3 @@ Also turned on the following rules:
 - `jest/prefer-hooks-in-order`
 - `jest/prefer-mock-promise-shorthand`
 - `jest/prefer-spy-on`
-- `jest/prefer-strict-equal`

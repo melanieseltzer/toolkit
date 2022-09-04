@@ -54,9 +54,6 @@ module.exports = {
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-spy-on.md
         'jest/prefer-spy-on': 'error',
 
-        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-strict-equal.md
-        'jest/prefer-strict-equal': 'error',
-
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-todo.md
         'jest/prefer-todo': 'error',
 
