@@ -1,6 +1,4 @@
 module.exports = {
-  plugins: ['jest'],
-
   env: {
     jest: true,
   },
@@ -8,10 +6,14 @@ module.exports = {
   overrides: [
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+
       extends: [
-        // https://github.com/jest-community/eslint-plugin-jest
+        // https://github.com/jest-community/eslint-plugin-jest#rules
         'plugin:jest/recommended',
+
+        'plugin:jest/style',
       ],
+
       rules: {
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/expect-expect.md
         'jest/expect-expect': 'off',
@@ -23,12 +25,6 @@ module.exports = {
         'jest/prefer-equality-matcher': 'warn',
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-on-top.md
         'jest/prefer-hooks-on-top': 'warn',
-        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md
-        'jest/prefer-to-be': 'warn',
-        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-contain.md
-        'jest/prefer-to-contain': 'warn',
-        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-have-length.md
-        'jest/prefer-to-have-length': 'warn',
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-todo.md
         'jest/prefer-todo': 'warn',
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md
