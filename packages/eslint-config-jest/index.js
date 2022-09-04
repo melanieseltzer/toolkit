@@ -15,8 +15,6 @@ module.exports = {
       ],
 
       rules: {
-        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/expect-expect.md
-        'jest/expect-expect': 'off',
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-test-return-statement.md
         'jest/no-test-return-statement': 'warn',
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-comparison-matcher.md
