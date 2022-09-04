@@ -1,6 +1,10 @@
 module.exports = {
   plugins: ['jest'],
 
+  env: {
+    jest: true,
+  },
+
   overrides: [
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
