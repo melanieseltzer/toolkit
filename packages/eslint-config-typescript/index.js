@@ -42,6 +42,17 @@ module.exports = {
         // Any overrides to `@typescript-eslint` recommended
         // -----------------------
 
+        // Allow TS comments, but only if a justification is provided.
+        // https://typescript-eslint.io/rules/ban-ts-comment/
+        '@typescript-eslint/ban-ts-comment': [
+          'error',
+          {
+            'ts-expect-error': 'allow-with-description',
+            'ts-ignore': 'allow-with-description',
+            'ts-nocheck': 'allow-with-description',
+          },
+        ],
+
         // Sometimes necessary when prototyping...
         // https://typescript-eslint.io/rules/no-explicit-any/
         '@typescript-eslint/no-explicit-any': 'off',
