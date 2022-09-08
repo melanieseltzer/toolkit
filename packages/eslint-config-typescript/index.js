@@ -55,16 +55,54 @@ module.exports = {
         camelcase: 'off',
         '@typescript-eslint/naming-convention': [
           'warn',
+          // const camelCase = true;  const UPPER_CASE = true;
+          // const camelCase = '';    const UPPER_CASE = '';
+          // const camelCase = 1;     const UPPER_CASE = 1;
+          // const camelCase = [];    const UPPER_CASE = [];
           {
             selector: 'variable',
-            format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-            leadingUnderscore: 'allow',
+            types: ['boolean', 'string', 'number', 'array'],
+            format: ['camelCase', 'UPPER_CASE'],
           },
+
+          // const camelCase = () => ...;
+          // const PascalCase = () => ...;
+          {
+            selector: 'variable',
+            types: ['function'],
+            format: ['camelCase', 'PascalCase'],
+          },
+
+          // function camelCase() {}
+          // function PascalCase() {}
+          {
+            selector: 'function',
+            format: ['camelCase', 'PascalCase'],
+          },
+
+          // const blah = (_unused, camelCase) => ...;
           {
             selector: 'parameter',
-            format: ['camelCase'],
+            format: [
+              'camelCase',
+
+              // Allows for React destructuring convention for jsx uppercase first letter:
+              /*
+                const Component = ({ icon: Icon }) => {
+                  return (
+                    <Icon />
+                  )
+                }
+              */
+              'PascalCase',
+            ],
             leadingUnderscore: 'allow',
           },
+
+          // class PascalCase
+          // interface PascalCase
+          // type PascalCase
+          // function something<PascalCase>
           {
             selector: 'typeLike',
             format: ['PascalCase'],
