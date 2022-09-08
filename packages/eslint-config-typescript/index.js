@@ -42,6 +42,14 @@ module.exports = {
         // Any overrides to `@typescript-eslint` recommended
         // -----------------------
 
+        // A little too heavy-handed for me.
+        // https://typescript-eslint.io/rules/no-explicit-any/
+        // https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
+        // https://typescript-eslint.io/rules/no-non-null-assertion
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+
         // Allow TS comments, but only if a justification is provided.
         // https://typescript-eslint.io/rules/ban-ts-comment/
         '@typescript-eslint/ban-ts-comment': [
@@ -52,10 +60,6 @@ module.exports = {
             'ts-nocheck': 'allow-with-description',
           },
         ],
-
-        // Sometimes necessary when prototyping...
-        // https://typescript-eslint.io/rules/no-explicit-any/
-        '@typescript-eslint/no-explicit-any': 'off',
 
         // Allow some vars to be unused in specific situations
         // https://typescript-eslint.io/rules/no-unused-vars/
