@@ -1,8 +1,5 @@
 module.exports = {
   rules: {
-    // https://eslint.org/docs/latest/rules/camelcase
-    camelcase: 'warn',
-
     // https://eslint.org/docs/rules/no-delete-var
     'no-delete-var': 'warn',
 

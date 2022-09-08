@@ -1,3 +1,16 @@
+const functionRules = {
+  format: ['camelCase', 'PascalCase'],
+  filter: {
+    // Allowing these as names:
+    // UNSAFE_something()
+    // unsafe_something()
+    // UNSTABLE_something()
+    // unstable_something()
+    regex: '^(UNSAFE|unsafe|UNSTABLE|unstable)_',
+    match: false,
+  },
+};
+
 module.exports = {
   extends: [
     // Make `eslint-plugin-import` work with TypeScript
@@ -70,14 +83,14 @@ module.exports = {
           {
             selector: 'variable',
             types: ['function'],
-            format: ['camelCase', 'PascalCase'],
+            ...functionRules,
           },
 
           // function camelCase() {}
           // function PascalCase() {}
           {
             selector: 'function',
-            format: ['camelCase', 'PascalCase'],
+            ...functionRules,
           },
 
           // const blah = (_unused, camelCase) => ...;

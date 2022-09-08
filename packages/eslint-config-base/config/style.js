@@ -3,6 +3,14 @@ module.exports = {
     // https://eslint.org/docs/rules/dot-location#enforce-newline-before-and-after-dot-dot-location
     'dot-location': ['warn', 'property'],
 
+    // https://eslint.org/docs/latest/rules/camelcase
+    camelcase: [
+      'warn',
+      {
+        allow: ['^(UNSAFE|unsafe|UNSTABLE|unstable)_'],
+      },
+    ],
+
     // https://eslint.org/docs/rules/lines-between-class-members#require-or-disallow-an-empty-line-between-class-members-lines-between-class-members
     'lines-between-class-members': 'warn',
 
