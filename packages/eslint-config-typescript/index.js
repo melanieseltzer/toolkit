@@ -43,6 +43,7 @@ module.exports = {
         // -----------------------
 
         // Allow TS comments, but only if a justification is provided.
+        // https://typescript-eslint.io/rules/ban-ts-comment/
         '@typescript-eslint/ban-ts-comment': [
           'error',
           {
