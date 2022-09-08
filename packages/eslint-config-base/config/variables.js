@@ -1,12 +1,12 @@
 module.exports = {
   rules: {
-    // https://eslint.org/docs/rules/no-delete-var
+    // https://eslint.org/docs/latest/rules/no-delete-var
     'no-delete-var': 'warn',
 
-    // https://eslint.org/docs/rules/no-undef-init
+    // https://eslint.org/docs/latest/rules/no-undef-init
     'no-undef-init': 'warn',
 
-    // https://eslint.org/docs/rules/no-unused-vars
+    // https://eslint.org/docs/latest/rules/no-unused-vars
     'no-unused-vars': [
       'warn',
       {

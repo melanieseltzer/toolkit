@@ -6,7 +6,7 @@ module.exports = {
   },
 
   rules: {
-    // https://eslint.org/docs/rules/no-restricted-globals#disallow-specific-global-variables-no-restricted-globals
+    // https://eslint.org/docs/latest/rules/no-restricted-globals
     'no-restricted-globals': [
       'error',
       ...['error', ...restrictedGlobals].map(global => ({
