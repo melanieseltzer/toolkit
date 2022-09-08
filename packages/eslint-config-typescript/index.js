@@ -1,3 +1,16 @@
+const functionRules = {
+  format: ['camelCase', 'PascalCase'],
+  filter: {
+    // Allowing these as names:
+    // UNSAFE_something()
+    // unsafe_something()
+    // UNSTABLE_something()
+    // unstable_something()
+    regex: '^(UNSAFE|unsafe|UNSTABLE|unstable)_',
+    match: false,
+  },
+};
+
 module.exports = {
   extends: [
     // Make `eslint-plugin-import` work with TypeScript
@@ -55,16 +68,54 @@ module.exports = {
         camelcase: 'off',
         '@typescript-eslint/naming-convention': [
           'warn',
+          // const camelCase = true;  const UPPER_CASE = true;
+          // const camelCase = '';    const UPPER_CASE = '';
+          // const camelCase = 1;     const UPPER_CASE = 1;
+          // const camelCase = [];    const UPPER_CASE = [];
           {
             selector: 'variable',
-            format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-            leadingUnderscore: 'allow',
+            types: ['boolean', 'string', 'number', 'array'],
+            format: ['camelCase', 'UPPER_CASE'],
           },
+
+          // const camelCase = () => ...;
+          // const PascalCase = () => ...;
+          {
+            selector: 'variable',
+            types: ['function'],
+            ...functionRules,
+          },
+
+          // function camelCase() {}
+          // function PascalCase() {}
+          {
+            selector: 'function',
+            ...functionRules,
+          },
+
+          // const blah = (_unused, camelCase) => ...;
           {
             selector: 'parameter',
-            format: ['camelCase'],
+            format: [
+              'camelCase',
+
+              // Allows for React destructuring convention for jsx uppercase first letter:
+              /*
+                const Component = ({ icon: Icon }) => {
+                  return (
+                    <Icon />
+                  )
+                }
+              */
+              'PascalCase',
+            ],
             leadingUnderscore: 'allow',
           },
+
+          // class PascalCase
+          // interface PascalCase
+          // type PascalCase
+          // function something<PascalCase>
           {
             selector: 'typeLike',
             format: ['PascalCase'],
