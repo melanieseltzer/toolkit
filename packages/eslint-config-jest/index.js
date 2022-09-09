@@ -15,18 +15,14 @@ const overrides = [
     ],
 
     rules: {
+      // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/consistent-test-it.md
+      'jest/consistent-test-it': 'warn',
+
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-conditional-in-test.md
       'jest/no-conditional-in-test': 'error',
 
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-test-return-statement.md
       'jest/no-test-return-statement': 'error',
-
-      // -----------------------
-      // Style
-      // -----------------------
-
-      // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/consistent-test-it.md
-      'jest/consistent-test-it': 'error',
 
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-comparison-matcher.md
       'jest/prefer-comparison-matcher': 'error',
@@ -50,10 +46,10 @@ const overrides = [
       'jest/prefer-spy-on': 'error',
 
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-todo.md
-      'jest/prefer-todo': 'error',
+      'jest/prefer-todo': 'warn',
 
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md
-      'jest/require-top-level-describe': 'error',
+      'jest/require-top-level-describe': 'warn',
     },
   },
 ];

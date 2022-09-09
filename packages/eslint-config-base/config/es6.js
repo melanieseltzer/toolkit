@@ -7,35 +7,31 @@ module.exports = {
     // https://eslint.org/docs/latest/rules/arrow-body-style
     'arrow-body-style': ['warn', 'as-needed'],
 
-    // https://eslint.org/docs/latest/rules/no-use-before-define
-    'no-use-before-define': [
-      'warn',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-      },
-    ],
+    // https://eslint.org/docs/latest/rules/no-lone-blocks
+    'no-lone-blocks': 'error',
+
+    // https://eslint.org/docs/latest/rules/no-template-curly-in-string
+    'no-template-curly-in-string': 'error',
 
     // https://eslint.org/docs/latest/rules/no-useless-constructor
-    'no-useless-constructor': 'warn',
+    'no-useless-constructor': 'error',
 
     // https://eslint.org/docs/latest/rules/no-useless-rename
-    'no-useless-rename': 'warn',
+    'no-useless-rename': 'error',
 
     // https://eslint.org/docs/latest/rules/object-shorthand
-    'object-shorthand': 'warn',
+    'object-shorthand': 'error',
 
     // https://eslint.org/docs/latest/rules/prefer-arrow-callback
-    'prefer-arrow-callback': 'warn',
+    'prefer-arrow-callback': 'error',
 
     // https://eslint.org/docs/latest/rules/prefer-const
-    'prefer-const': 'warn',
+    'prefer-const': 'error',
 
     // https://eslint.org/docs/latest/rules/prefer-rest-params
-    'prefer-rest-params': 'warn',
+    'prefer-rest-params': 'error',
 
     // https://eslint.org/docs/latest/rules/prefer-spread
-    'prefer-spread': 'warn',
+    'prefer-spread': 'error',
   },
 };

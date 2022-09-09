@@ -1,8 +1,5 @@
 module.exports = {
   rules: {
-    // https://eslint.org/docs/latest/rules/no-delete-var
-    'no-delete-var': 'warn',
-
     // https://eslint.org/docs/latest/rules/no-undef-init
     'no-undef-init': 'warn',
 

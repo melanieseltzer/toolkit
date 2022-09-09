@@ -17,7 +17,7 @@ module.exports = {
     'dot-notation': 'warn',
 
     // https://eslint.org/docs/latest/rules/eqeqeq
-    eqeqeq: ['warn', 'smart'],
+    eqeqeq: ['error', 'smart'],
 
     // https://eslint.org/docs/latest/rules/new-parens
     'new-parens': 'warn',
@@ -29,7 +29,7 @@ module.exports = {
     'no-array-constructor': 'warn',
 
     // https://eslint.org/docs/latest/rules/no-caller
-    'no-caller': 'warn',
+    'no-caller': 'error',
 
     // https://eslint.org/docs/latest/rules/no-console
     'no-console': [
@@ -40,28 +40,19 @@ module.exports = {
     ],
 
     // https://eslint.org/docs/latest/rules/no-constructor-return
-    'no-constructor-return': 'warn',
+    'no-constructor-return': 'error',
 
     // https://eslint.org/docs/latest/rules/no-eval
-    'no-eval': 'warn',
+    'no-eval': 'error',
 
     // https://eslint.org/docs/latest/rules/no-extend-native
-    'no-extend-native': 'warn',
+    'no-extend-native': 'error',
 
     // https://eslint.org/docs/latest/rules/no-extra-bind
-    'no-extra-bind': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-global-assign
-    'no-global-assign': 'warn',
+    'no-extra-bind': 'error',
 
     // https://eslint.org/docs/latest/rules/no-implied-eval
-    'no-implied-eval': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-labels
-    'no-labels': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-lone-blocks
-    'no-lone-blocks': 'warn',
+    'no-implied-eval': 'error',
 
     // https://eslint.org/docs/latest/rules/no-loop-func
     'no-loop-func': 'error',
@@ -82,37 +73,25 @@ module.exports = {
     ],
 
     // https://eslint.org/docs/latest/rules/no-new
-    'no-new': 'warn',
+    'no-new': 'error',
 
     // https://eslint.org/docs/latest/rules/no-new-func
-    'no-new-func': 'warn',
+    'no-new-func': 'error',
 
     // https://eslint.org/docs/latest/rules/no-new-wrappers
-    'no-new-wrappers': 'warn',
+    'no-new-wrappers': 'error',
 
     // https://eslint.org/docs/latest/rules/no-octal-escape
-    'no-octal-escape': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-restricted-syntax
-    'no-restricted-syntax': ['warn', 'WithStatement'],
-
-    // https://eslint.org/docs/latest/rules/no-script-url
-    'no-script-url': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-self-assign
-    'no-self-assign': 'warn',
+    'no-octal-escape': 'error',
 
     // https://eslint.org/docs/latest/rules/no-self-compare
-    'no-self-compare': 'warn',
+    'no-self-compare': 'error',
 
     // https://eslint.org/docs/latest/rules/no-sequences
-    'no-sequences': 'warn',
-
-    // https://eslint.org/docs/latest/rules/no-template-curly-in-string
-    'no-template-curly-in-string': 'warn',
+    'no-sequences': 'error',
 
     // https://eslint.org/docs/latest/rules/no-throw-literal
-    'no-throw-literal': 'warn',
+    'no-throw-literal': 'error',
 
     // https://eslint.org/docs/latest/rules/no-unused-expressions
     'no-unused-expressions': [
@@ -125,10 +104,16 @@ module.exports = {
     ],
 
     // https://eslint.org/docs/latest/rules/no-useless-call
-    'no-useless-call': 'warn',
+    'no-useless-call': 'error',
 
-    // https://eslint.org/docs/latest/rules/no-useless-escape
-    'no-useless-escape': 'warn',
+    // https://eslint.org/docs/latest/rules/no-use-before-define
+    'no-use-before-define': [
+      'error',
+      {
+        functions: false,
+        variables: false,
+      },
+    ],
 
     // https://eslint.org/docs/latest/rules/radix
     radix: 'error',

@@ -38,7 +38,7 @@ module.exports = {
     'no-useless-concat': 'warn',
 
     // https://eslint.org/docs/latest/rules/operator-assignment
-    'operator-assignment': 'warn',
+    'operator-assignment': ['warn', 'always'],
 
     // https://eslint.org/docs/latest/rules/yoda
     yoda: 'warn',
