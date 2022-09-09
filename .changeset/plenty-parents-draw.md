@@ -1,5 +1,5 @@
 ---
-'@mels/eslint-config-react': minor
+'@mels/eslint-config-react': major
 ---
 
 Turned on rules that were previously set to `off`:

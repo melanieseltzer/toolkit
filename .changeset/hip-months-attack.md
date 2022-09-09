@@ -1,5 +1,5 @@
 ---
-'@mels/eslint-config-base': minor
+'@mels/eslint-config-base': major
 ---
 
 Changed these rules:
