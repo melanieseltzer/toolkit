@@ -31,7 +31,7 @@ module.exports = {
     // Any overrides to `eslint-plugin-import` recommended
     // -----------------------
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-unresolved.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
     'import/no-unresolved': [
       'error',
       {
@@ -45,7 +45,7 @@ module.exports = {
     // -----------------------
 
     // Enforces extensions for all import statements
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/extensions.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md
     'import/extensions': [
       'warn',
       'ignorePackages',
@@ -60,25 +60,25 @@ module.exports = {
       ),
     ],
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/first.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md
     'import/first': 'warn',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-anonymous-default-export.md
-    'import/no-anonymous-default-export': 'warn',
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-anonymous-default-export.md
+    'import/no-anonymous-default-export': 'error',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/newline-after-import.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
     'import/newline-after-import': 'warn',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-cycle.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-cycle.md
     'import/no-cycle': 'error',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-mutable-exports.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-mutable-exports.md
     'import/no-mutable-exports': 'error',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-self-import.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-self-import.md
     'import/no-self-import': 'error',
 
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/latest/rules/no-useless-path-segments.md
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-useless-path-segments.md
     'import/no-useless-path-segments': ['warn', { commonjs: true }],
 
     // -----------------------

@@ -157,8 +157,9 @@ module.exports = {
           'warn',
           {
             functions: false,
-            variables: false,
             typedefs: false,
+            enums: false,
+            ignoreTypeReferences: false,
           },
         ],
 
