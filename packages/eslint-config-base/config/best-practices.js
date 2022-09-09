@@ -107,7 +107,13 @@ module.exports = {
     'no-useless-call': 'error',
 
     // https://eslint.org/docs/latest/rules/no-use-before-define
-    'no-use-before-define': ['error', 'nofunc'],
+    'no-use-before-define': [
+      'error',
+      {
+        functions: false,
+        variables: false,
+      },
+    ],
 
     // https://eslint.org/docs/latest/rules/radix
     radix: 'error',

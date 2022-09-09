@@ -154,12 +154,11 @@ module.exports = {
         // https://typescript-eslint.io/rules/no-use-before-define/
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': [
-          'warn',
+          'error',
           {
             functions: false,
+            variables: false,
             typedefs: false,
-            enums: false,
-            ignoreTypeReferences: false,
           },
         ],
 

@@ -4,7 +4,7 @@
 
 Changed these rules:
 
-- `no-use-before-define`: cannot use classes and variables before defined
+- `no-use-before-define`: cannot use classes before defined
 
 Removed these rules:
 
