@@ -2,5 +2,7 @@
 '@mels/eslint-config-react': minor
 ---
 
-- Turn on `testing-library/no-render-in-setup` rule
-- Turn on `react/no-array-index-key` rule
+Turned on rules that were previously set to `off`:
+
+- `testing-library/no-render-in-setup`
+- `react/no-array-index-key`
