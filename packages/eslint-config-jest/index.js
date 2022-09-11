@@ -1,3 +1,18 @@
+const readPkgUp = require('read-pkg-up');
+
+const { packageJson } = readPkgUp.sync();
+
+const allDeps = Object.keys({
+  ...packageJson.peerDependencies,
+  ...packageJson.devDependencies,
+  ...packageJson.dependencies,
+});
+
+const hasTestingLibrary = [
+  '@testing-library/dom',
+  '@testing-library/react',
+].some(dependency => allDeps.includes(dependency));
+
 const overrides = [
   {
     files: [
@@ -6,13 +21,18 @@ const overrides = [
       '**/?(*.)+(spec|test).[jt]s?(x)',
     ],
 
+    plugins: [hasTestingLibrary ? 'testing-library' : null].filter(Boolean),
+
     extends: [
       // https://github.com/jest-community/eslint-plugin-jest#rules
       'plugin:jest/recommended',
 
       // https://github.com/jest-community/eslint-plugin-jest#rules
       'plugin:jest/style',
-    ],
+
+      // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/lib/configs/react.ts
+      hasTestingLibrary ? 'plugin:testing-library/react' : null,
+    ].filter(Boolean),
 
     rules: {
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/consistent-test-it.md
@@ -50,6 +70,16 @@ const overrides = [
 
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md
       'jest/require-top-level-describe': 'warn',
+
+      ...(hasTestingLibrary
+        ? {
+            // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-explicit-assert.md
+            'testing-library/prefer-explicit-assert': 'warn',
+
+            // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-wait-for.md
+            'testing-library/prefer-wait-for': 'error',
+          }
+        : {}),
     },
   },
 ];
