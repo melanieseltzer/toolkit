@@ -21,8 +21,6 @@ const overrides = [
       '**/?(*.)+(spec|test).[jt]s?(x)',
     ],
 
-    plugins: [hasTestingLibrary ? 'testing-library' : null].filter(Boolean),
-
     extends: [
       // https://github.com/jest-community/eslint-plugin-jest#rules
       'plugin:jest/recommended',
