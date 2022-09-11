@@ -2,16 +2,17 @@ const readPkgUp = require('read-pkg-up');
 
 const { packageJson } = readPkgUp.sync();
 
-const allDeps = Object.keys({
-  ...packageJson.peerDependencies,
-  ...packageJson.devDependencies,
-  ...packageJson.dependencies,
-});
+let hasReactTestingLibrary = false;
 
-const hasTestingLibrary = [
-  '@testing-library/dom',
-  '@testing-library/react',
-].some(dependency => allDeps.includes(dependency));
+if (packageJson) {
+  const allDeps = Object.keys({
+    ...packageJson.peerDependencies,
+    ...packageJson.devDependencies,
+    ...packageJson.dependencies,
+  });
+
+  hasReactTestingLibrary = allDeps.includes('@testing-library/react');
+}
 
 const overrides = [
   {
@@ -29,7 +30,7 @@ const overrides = [
       'plugin:jest/style',
 
       // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/lib/configs/react.ts
-      hasTestingLibrary ? 'plugin:testing-library/react' : null,
+      hasReactTestingLibrary ? 'plugin:testing-library/react' : null,
     ].filter(Boolean),
 
     rules: {
@@ -69,7 +70,7 @@ const overrides = [
       // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-top-level-describe.md
       'jest/require-top-level-describe': 'warn',
 
-      ...(hasTestingLibrary
+      ...(hasReactTestingLibrary
         ? {
             // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-explicit-assert.md
             'testing-library/prefer-explicit-assert': 'warn',
