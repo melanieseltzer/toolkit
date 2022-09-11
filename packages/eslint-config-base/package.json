@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-config-base",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Shareable base JS ESLint config.",
   "main": "./index.js",
   "files": [
@@ -21,7 +21,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@mels/eslint-patch": "^1.0.2",
+    "@mels/eslint-patch": "^1.0.3",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-simple-import-sort": "^7.0.0"
