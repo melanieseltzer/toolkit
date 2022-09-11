@@ -27,7 +27,6 @@ This package contains all my React-related rules as an extensible shared ESLint 
 - React ([eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react))
 - React Hooks ([eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks))
 - JSX A11y (accessibility rules) ([eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y))
-- React Testing Library ([eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)) (if extended with `@mels/react/testing-library`)
 - JSX runtime config (if extended with `@mels/react/jsx-runtime`)
 
 ## Install
@@ -51,17 +50,6 @@ yarn add @mels/eslint-config-react --dev
 
 module.exports = {
   extends: ['@mels/base', '@mels/react'],
-  // ... rest of config
-};
-```
-
-If you're using [React Testing Library](https://testing-library.com/), this package also exports a `testing-library` config:
-
-```js
-// .eslintrc.js
-
-module.exports = {
-  extends: ['@mels/base', '@mels/react', '@mels/react/testing-library'],
   // ... rest of config
 };
 ```

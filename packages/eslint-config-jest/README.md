@@ -22,7 +22,11 @@
 
 ## ✨ Features
 
-This package contains all my Jest rules as an extensible shared ESLint config.
+This package contains all my Jest rules as an extensible shared ESLint config. It extends a number of configs as a base:
+
+- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) recommended rules
+- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) style rules
+- [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/lib/configs/react.ts) React rules (but only if this config detects that `@testing-library/react` is installed)
 
 ## Install
 
