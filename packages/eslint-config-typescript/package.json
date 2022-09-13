@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-config-typescript",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Shareable TypeScript ESLint config.",
   "main": "./index.js",
   "files": [

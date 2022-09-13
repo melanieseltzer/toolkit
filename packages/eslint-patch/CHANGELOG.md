@@ -1,5 +1,11 @@
 # @mels/eslint-patch
 
+## 1.0.3
+
+### Patch Changes
+
+- [#26](https://github.com/melanieseltzer/toolkit/pull/26) [`b90a8d3`](https://github.com/melanieseltzer/toolkit/commit/b90a8d354a2ad804dd326406c2127f769a271354) Thanks [@melanieseltzer](https://github.com/melanieseltzer)! - Bump `@rushstack/eslint-patch` dependency and unlock it
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@mels/eslint-config-prettier",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Shareable ESLint config for Prettier.",
   "main": "./index.js",
   "files": [
