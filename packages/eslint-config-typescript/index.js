@@ -62,7 +62,7 @@ module.exports = {
           },
         ],
 
-        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-misused-promises.md
+        // https://typescript-eslint.io/rules/no-misused-promises/
         '@typescript-eslint/no-misused-promises': [
           'error',
           {
