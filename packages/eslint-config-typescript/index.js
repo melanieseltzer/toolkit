@@ -34,6 +34,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
 
         // Rules that specifically require type information
+        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
 
@@ -58,6 +59,14 @@ module.exports = {
             'ts-expect-error': 'allow-with-description',
             'ts-ignore': 'allow-with-description',
             'ts-nocheck': 'allow-with-description',
+          },
+        ],
+
+        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-misused-promises.md
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: false,
           },
         ],
 
