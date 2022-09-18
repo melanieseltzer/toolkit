@@ -21,7 +21,7 @@
     "@mels/eslint-config-jest": "1.0.0",
     "@mels/eslint-config-prettier": "1.0.0",
     "@mels/eslint-config-react": "1.0.0",
-    "@mels/eslint-config-typescript": "1.0.0",
+    "@mels/eslint-config-typescript": "1.0.1",
     "@mels/prettier-config": "1.0.0"
   },
   "scripts": {

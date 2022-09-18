@@ -1,5 +1,11 @@
 # @mels/eslint-config-typescript
 
+## 1.0.1
+
+### Patch Changes
+
+- [#40](https://github.com/melanieseltzer/toolkit/pull/40) [`96f69c8`](https://github.com/melanieseltzer/toolkit/commit/96f69c8b51704413843f9060df9700942717eacf) Thanks [@melanieseltzer](https://github.com/melanieseltzer)! - Patch `@typescript-eslint/no-misused-promises` rule - stop checking void return.
+
 ## 1.0.0
 
 ### Major Changes
