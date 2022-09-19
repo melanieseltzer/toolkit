@@ -1,5 +1,11 @@
 # @mels/eslint-config-base
 
+## 1.0.1
+
+### Patch Changes
+
+- [#42](https://github.com/melanieseltzer/toolkit/pull/42) [`415fea5`](https://github.com/melanieseltzer/toolkit/commit/415fea5c8a2711f3b61764d6fd4b1db12617df30) Thanks [@melanieseltzer](https://github.com/melanieseltzer)! - Fix import grouping so component imports are grouped first separately
+
 ## 1.0.0
 
 ### Major Changes
