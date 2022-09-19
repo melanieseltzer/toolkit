@@ -99,7 +99,9 @@ module.exports = {
           // External packages. `react` or 'next' packages come first.
           ['^react', '^next', '^@?\\w'],
           // Internal packages that are aliased.
-          ['^(~|@|src|components|app)(/.*|$)'],
+          // Component imports should be grouped separately first.
+          ['^(~|@|src|app)(/components)(/.*|$)', '^(components)(/.*|$)'],
+          ['^(~|@|src|app)(/.*|$)'],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.
