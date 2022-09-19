@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
-    "@mels/eslint-config-base": "1.0.0",
+    "@mels/eslint-config-base": "1.0.1",
     "@mels/eslint-config-jest": "1.0.0",
     "@mels/eslint-config-prettier": "1.0.0",
     "@mels/eslint-config-react": "1.0.0",
