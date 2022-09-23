@@ -15,7 +15,17 @@ module.exports = {
       files: ['**/*.ts?(x)'],
 
       parserOptions: {
-        project: './tsconfig.json',
+        ecmaVersion: 2020,
+        project: './tsconfig.eslint.json',
+        tsconfigRootDir: __dirname,
+      },
+
+      settings: {
+        'import/resolver': {
+          typescript: {
+            project: './tsconfig.eslint.json',
+          },
+        },
       },
     },
   ],
